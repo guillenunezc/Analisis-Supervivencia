@@ -1,7 +1,7 @@
 import streamlit as st
 import plotly.express as px
 
-st.title('Calculadora Médica: Riesgo de Muerte')
+st.title('Calculadora Médica: Riesgo de Muerte en pacientes con Cáncer de Pulmón')
 st.info("Esta aplicación fue creada solo para propósitos educativos.")
 st.caption("Esta aplicación ayuda a los profesionales médicos al proporcionarles la capacidad de anticipar el riesgo de mortalidad de sus pacientes y, además, les permite elaborar tratamientos personalizados basados en un análisis detallado de la curva de riesgo. De esta manera, se busca optimizar las expectativas de vida de cada paciente, brindando un enfoque más preciso y efectivo en la atención médica.")
 

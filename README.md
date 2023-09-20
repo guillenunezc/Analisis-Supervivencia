@@ -19,9 +19,9 @@ Esta aplicación de Streamlit permite a los profesionales médicos calcular y pr
 1. **Clonar este repositorio**:
 
    ```bash
-   git clone https://github.com/tuusuario/calculadora-riesgo-muerte.git
+   git clone https://github.com/guillenunezc/Analisis-Supervivencia.git
 
-2. Ejecutar
+2. **Ejecutar**
    ```bash
    cd .\app\
    streamlit run app.py
