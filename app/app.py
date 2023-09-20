@@ -1,9 +1,9 @@
 import streamlit as st
-import plotly
+import plotly.express as px
 
 st.title('Calculadora Médica: Riesgo de Muerte')
 st.info("Esta aplicación fue creada solo para propósitos educativos.")
-
+st.caption("Esta aplicación ayuda a los profesionales médicos al proporcionarles la capacidad de anticipar el riesgo de mortalidad de sus pacientes y, además, les permite elaborar tratamientos personalizados basados en un análisis detallado de la curva de riesgo. De esta manera, se busca optimizar las expectativas de vida de cada paciente, brindando un enfoque más preciso y efectivo en la atención médica.")
 
 # Diccionario con los inputs
 ## Para variables numéricas utilizar st.number_input
@@ -43,5 +43,13 @@ if submit:      # Este if es para que "si se presiona el botón submit (Calcular
     survival_prob, time = data_utils.predict_survival_probability(dic_input, model, encoder)
     diagnosis = f"El paciente sobrevivirá `{time} meses` con una probabilidad de `{survival_prob}%`"
 
-    st.write(diagnosis)
+    st.write(diagnosis)     # Esta línea produce la predicción y escribe el mensaje con la predicción en la App Web
 
+    # Visualización de la Probabilidad de Supervivencia
+        # En el area de supervivencia, no solo se necesita la probabilidad de supervivencia en un mes dado
+        # como lo hemos estado calculando hasta el momento. Se necesita visualizar la curva de supervivencia
+        # en el tiempo
+    df_survival = data_utils.df_survival_prob(dic_input, model, encoder)
+    fig = px.line(df_survival, x="time", y="survival_prob")
+
+    st.plotly_chart(fig)
