@@ -1,4 +1,4 @@
-# Calculadora Médica: Riesgo de Muerte en Cáncer de Pulmón
+# Calculadora Médica: Riesgo de Muerte en pacientes con Cáncer de Pulmón
 
 ![Calculadora Médica: Riesgo de Muerte](/screenshot/Calculadora_Médica.png)
 
