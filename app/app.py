@@ -12,7 +12,7 @@ st.info("Esta aplicación fue creada solo para propósitos educativos.")
 
 with st.sidebar.form("user_input"):     # Esto es para que las predicciones ocurran solo cuando le damos clic al botón submit y no cada vez que actualizamos un parámetro
     dic_input = {
-        'age': st.number_input("Edad", min_value=0, max_value=100, value=50),
+        'age': st.slider("Edad", min_value=0, max_value=100, value=50),
         'karnofsky_score': st.number_input("Karnofsky Score", min_value=0, max_value=100, value=60),
         'months_from_diagnosis': st.number_input("Meses desde diagnostico", min_value=0, max_value=100, value=0),
         'prior_therapy': st.selectbox("Terapia previa",['No', 'Yes'] ),
