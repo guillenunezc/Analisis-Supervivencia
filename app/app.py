@@ -10,7 +10,7 @@ st.info("Esta aplicación fue creada solo para propósitos educativos.")
 ## Para variables categóricas, extraer todos los valores posibles desde el encoder (encoder.categories_)
 ### Las categorías del encoder se ven en los otros notebooks
 
-with st.form("user_input"):     # Esto es para que las predicciones ocurran solo cuando le damos clic al botón submit y no cada vez que actualizamos un parámetro
+with st.sidebar.form("user_input"):     # Esto es para que las predicciones ocurran solo cuando le damos clic al botón submit y no cada vez que actualizamos un parámetro
     dic_input = {
         'age': st.number_input("Edad", min_value=0, max_value=100, value=50),
         'karnofsky_score': st.number_input("Karnofsky Score", min_value=0, max_value=100, value=60),
